@@ -1,0 +1,84 @@
+{
+  "Events": [
+    {
+      "name": "Underwater Basket Weaving",
+      "location": "NWQB",
+      "starts_at": "2017 - 11 - 18 T18: 00: 00 Z",
+      "ends_at": "2017 - 11 - 18 T20: 00: 00 Z",
+      "displayDate": "November 18, 2017 from 6: 00 - 8: 00 PM ",
+      "Description": "More fun than you sink."
+    },
+    {
+      "name": "Happy Fun Times with the Freshies",
+      "location": "JBHT",
+      "starts_at": "2017 - 11 - 18 T00: 00: 00 Z",
+      "ends_at": "2017 - 11 - 18 T23: 59: 59 Z",
+      "displayDate": "November 18,2017 All Day",
+      "Description": "Shoutout to Tyler and Marshall."
+    },
+    {
+      "name": "Cake Eating Contest",
+      "location": "SCEN",
+      "starts_at": "2017 - 11 - 19 T06: 00: 00 Z",
+      "ends_at": "2017 - 11 - 18 T08: 00: 00 Z",
+      "displayDate": "November 19,2017 from 6: 00 - 8: 00 AM",
+      "Description": "The cakes are not a lie."
+    },
+    {
+      "name": "Team Power Nap",
+      "location": "HOTZ",
+      "Starts_at": "2017 - 11 - 18 TH03: 37: 00 Z",
+      "Ends_at": "2017 - 11 - 18 TH03: 53: 00 Z",
+      "displayDate": "November 18,2017 3: 37 am - 3: 53 am",
+      "Description":  "Sleep is for the weak."
+    },
+    {
+      "name": "Laugh Track and Field Comedy Show",
+      "location": "HILL",
+      "starts_at": "2017 - 12 - 01 T20: 00: 00 Z",
+      "ends_at": "2017 - 12 - 01 T21: 30: 00 Z",
+      "displayDate": "December 01,2017 from 8: 00 - 9: 30 PM",
+      "Description": "Enjoy a gut-busting experience with our hilarious improvised show!"
+    },
+    {
+      "name": "Team Presentation",
+      "location": "JBHT",
+      "Starts_at": "2017 - 11 - 18 T17: 00: 00 Z",
+      "Ends_at": "2017 - 11 - 18 T17: 15: 00 Z",
+      "displayDate": "November 18,2017 5: 00 pm - 5: 15 pm",
+      "Description": "Watch the Freshies win this Hackathon!"
+    },
+    {
+      "name": "Rubik’s Cube Club Meeting",
+      "location": "BELL",
+      "starts_at": "2017 - 11 - 30 T19: 00: 00 Z",
+      "ends_at": "2017 - 11 - 30 T20: 00: 00 Z",
+      "displayDate": "November 30,2017 from 7: 00 - 8: 00 PM",
+      "Description": "Come and learn how to solve or to learn new methods!"
+    },
+    {
+      "name": "Mysterious Liquid Pong",
+      "location": "PKAF",
+      "Starts_at": "2017 - 11 - 18 T22: 00: 00 Z",
+      "Ends_at": "2017 - 11 - 19 T04: 00: 00 Z",
+      "displayDate": "November 18,2017 10: 00 pm - November 19,2017 4: 00 am",
+      "Description":  "Party with the Pikes. BYOB."
+    },
+    {
+      "name": "Class Party",
+      "location": "BAND",
+      "starts_at": "2017 - 11 - 19 T10: 00: 00 Z",
+      "ends_at": "2017 - 11 - 19 T14: 00: 00 Z",
+      "display_date": "November 19,2017 from 10: 00 AM to 2: 00 PM",
+      "Description": "Arbor Day Theme"
+    },
+    {
+      "name": "Hole - Digging Class",
+      "location": "YOCM",
+      "starts_at": "2017 - 11 - 20 T02: 00: 00 Z",
+      "ends_at": "2017 - 11 - 20 T22: 00: 00 Z",
+      "display_date": "November 20,2017 from 2: 00 AM to 10: 00 PM",
+      "Description": "We dig ourselves deeper each weekend"
+    }
+  ]
+}

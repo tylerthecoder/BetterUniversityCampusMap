@@ -1,0 +1,67 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<base href = "https://calendars.uark.edu/" />
+<script type="text/javascript">
+	let links = [];
+	let events = [];
+	let isLink = function (ele) {
+		if (ele.tagName == "A") {
+			if (ele.href.length > 0) links.push(ele.href)
+		}else {
+			for (let i of ele.children) {
+				isLink(i)
+			}
+		}
+	}
+	$.post( "https://calendars.uark.edu/EventList.aspx?fromdate=11/18/2017&todate=11/18/2017&view=DateTime&display=Day&type=public", function( data ) {
+		document.body.innerHTML = data;
+		
+		isLink(tblEvents)
+		for (let link of links) {
+			$.post(link, function( data ) {
+				document.body.innerHTML = data;
+				let event = {link:link};
+				let Bs = []
+				let isB = function (ele) {
+					if (ele.tagName == "B" || ele.style.fontWeight == "bold") {
+						Bs.push(ele)
+					}else {
+						for (let i of ele.children) {
+							isB(i)
+						}
+					}
+				}
+
+				isB(pnlEventDetails.children[0].children[0])
+
+				for (let i of Bs) {
+					if (i.innerHTML == "Event Description:") {
+						event.desc = i.parentElement.childNodes[3].wholeText;
+					}else if (i.parentElement.className == "listheadtext") {
+						event.name = i.innerHTML
+					}else if (i.innerHTML == "Location Information:"){
+						let brCount = 0
+						for (j of i.parentElement.childNodes) {
+							if (brCount == 2) {
+								event.loc = j.wholeText;
+								break
+							}
+							if (j.tagName == "BR") brCount++
+						}
+					}
+				}
+				events.push(event)
+			})
+		}
+
+		console.log(events)
+
+	});
+</script>
+</head>
+<body>
+
+</body>
+
+</html>

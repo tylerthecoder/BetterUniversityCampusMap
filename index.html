@@ -1,0 +1,116 @@
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Freshies</title>
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #mapDiv {
+        height: 100%;
+        z-index: 0;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      #query {
+        position: absolute;
+        left:0px;
+        right:0px;
+        width:50%;
+        margin-left:auto;
+        margin-right:auto;
+        z-index: 1;
+        height: 40px;
+      }
+      #res {
+        z-index: 1;
+        position: absolute;
+        top:40px;
+        left:0px;
+        right:0px;
+        width:50%;
+        margin-left:auto;
+        margin-right:auto;
+        text-align:center;
+        background-color: white;
+        height:calc(100%-40px);
+        overflow-y: scroll;
+      }
+      .result {
+        font-size: 1em;
+        margin:0px;
+        font-weight: bold;
+      }
+      #enterEventForm {
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        z-index: 1;
+        border:black 2px solid;
+        background: white;
+        padding:10px;
+        display:none;
+      } 
+      #toggleFormButton {
+        position: absolute;
+        top:0px;
+        left:0px;
+        background:red;
+        color:white;
+        border:black 2px solid;
+      }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSjM98gaUi34mEZyAmi2mMJlwBkN2nU50&libraries=visualization"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+    <script src="customOverlay.js"></script>
+  </head>
+  <body >
+    <input id="query" placeholder="Look Up Something" onkeyup="search()">
+    <div id="res"></div>
+    <div id="mapDiv"></div>
+    <button id="toggleFormButton" onclick="$('#enterEventForm').toggle()"> Add Event </button>
+    <div id="enterEventForm">
+      <h1>Enter Event </h1>
+      <button onclick="$('#enterEventForm').toggle()"> Exit </button>
+      <form>
+        <label for="name">Event Name</label>
+        <input type="text" name="name">
+        <br>
+
+        <label for="starts_at">Start Time</label>
+        <input type="text" name="starts_at">
+        <br>
+
+        <label for="ends_at">End Time</label>
+        <input type="text" name="ends_at">
+        <br>
+
+        <label for="displayDate">Date</label>
+        <input type="date" name="displayDate"> 
+        <br>
+
+        <label for="Description">Location Code</label>
+        <input type="text" name="location" >
+        <br>
+
+        <label for="Description">Description</label>
+        <input type="text" name="Description" >
+        <br>
+
+        <label for="invite">Invite by Email</label>
+        <input type="name" name="invite"> 
+        <br>
+         
+      </form>
+
+        <button onclick="sendEvent()"> Submit </button>
+    </div>
+  </body>
+</html>
